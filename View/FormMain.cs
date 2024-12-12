@@ -23,7 +23,7 @@ namespace TbBaiZhouKeJi
 
         public FormMain()
         {
-         
+
             ApplyFadeIn(this);
             InitializeComponent();
             AntUIConfigInit();//主题设置
@@ -50,17 +50,21 @@ namespace TbBaiZhouKeJi
         public void Subscribe()
         {
             m_GlobalHook = Hook.GlobalEvents();
-            m_GlobalHook.KeyPress += GlobalHookKeyPress;
+            m_GlobalHook.KeyUp += GlobalHookKeyUp;
         }
 
-        private void GlobalHookKeyPress(object sender, KeyPressEventArgs e)
+        private void GlobalHookKeyUp(object sender, KeyEventArgs e)
         {
-            Console.WriteLine("KeyPress: \t{0}", e.KeyChar);
+            if (e.KeyValue >= 97 && e.KeyValue <= 105)
+            {
+                //Console.WriteLine(e.KeyValue - 96);
+                HotkeyPressed.Invoke(e.KeyValue - 96);
+            }
         }
 
         public void Unsubscribe()
         {
-            m_GlobalHook.KeyPress -= GlobalHookKeyPress;
+            m_GlobalHook.KeyUp -= GlobalHookKeyUp;
             m_GlobalHook.Dispose();
         }
 

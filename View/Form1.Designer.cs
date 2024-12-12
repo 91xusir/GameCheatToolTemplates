@@ -33,6 +33,7 @@
             // 
             // flowPanel1
             // 
+            this.flowPanel1.Align = AntdUI.TAlignFlow.Left;
             this.flowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowPanel1.Name = "flowPanel1";

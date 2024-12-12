@@ -12,10 +12,9 @@ namespace TbBaiZhouKeJi
 {
     { 1, "卡牌无冷却" },
     { 2, "无条件种植" },
-    //{ 3, "一击致命" },
-    //{ 4, "一击致命" },
-    //{ 5, "一击致命" },
-    //{ 6, "一击致命" },
+    { 3, "手套无冷却" },
+    { 4, "全屏秒杀" },
+    { 5, "大嘴花增强" },
 };
 
         public Dictionary<int, AntdUI.Checkbox> checkboxList = new Dictionary<int, AntdUI.Checkbox>();
@@ -76,12 +75,19 @@ namespace TbBaiZhouKeJi
                 switch (checkbox.Tag)
                 {
                     case "1":
-                        isOpenSuccess = Service1.RemoveCd(e.Value);
+                        isOpenSuccess = Service1.Cheat1(e.Value);
                         break;
                     case "2":
-                        isOpenSuccess = Service1.RemoveCost(e.Value);
+                        isOpenSuccess = Service1.Cheat2(e.Value);
                         break;
                     case "3":
+                        isOpenSuccess = Service1.Cheat3(e.Value);
+                        break;
+                    case "4":
+                        isOpenSuccess = Service1.Cheat4(e.Value);
+                        break;
+                    case "5":
+                        isOpenSuccess = Service1.Cheat5(e.Value);
                         break;
                 }
                 if (!isOpenSuccess)//激活失败
