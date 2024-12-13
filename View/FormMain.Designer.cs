@@ -76,9 +76,9 @@ namespace TbBaiZhouKeJi
             this.windowBar.Mode = AntdUI.TAMode.Dark;
             this.windowBar.Name = "windowBar";
             this.windowBar.Size = new System.Drawing.Size(888, 30);
-            this.windowBar.SubText = "QQ:806406129";
+            this.windowBar.SubText = "v2.1.5";
             this.windowBar.TabIndex = 3;
-            this.windowBar.Text = " xxx修改器        ";
+            this.windowBar.Text = "PVZ融合版修改器        ";
             // 
             // panelRight
             // 
@@ -171,7 +171,7 @@ namespace TbBaiZhouKeJi
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::TbBaiZhouKeJi.Properties.Resources.imgdemo;
+            this.panel1.BackgroundImage = global::TbBaiZhouKeJi.Properties.Resources.Ethereum;
             this.panel1.Location = new System.Drawing.Point(2, 5);
             this.panel1.Name = "panel1";
             this.panel1.Radius = 8;
@@ -191,9 +191,11 @@ namespace TbBaiZhouKeJi
             menuItem1.ID = "1";
             menuItem1.Select = true;
             menuItem1.Text = "常用功能";
+            menuItem2.Enabled = false;
             menuItem2.IconSvg = resources.GetString("menuItem2.IconSvg");
             menuItem2.ID = "2";
             menuItem2.Text = "高级功能";
+            menuItem3.Enabled = false;
             menuItem3.IconSvg = resources.GetString("menuItem3.IconSvg");
             menuItem3.ID = "3";
             menuItem3.Text = "个人中心";

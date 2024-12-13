@@ -63,9 +63,9 @@ namespace TbBaiZhouKeJi.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap imgdemo {
+        internal static System.Drawing.Bitmap Ethereum {
             get {
-                object obj = ResourceManager.GetObject("imgdemo", resourceCulture);
+                object obj = ResourceManager.GetObject("Ethereum", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -35,7 +35,10 @@ namespace TbBaiZhouKeJi
         {
             MenuMainInit();
             StartUIHide();
-            DllImport.AllocConsole();
+#if DEBUG
+    DllImport.AllocConsole(); // 仅在Debug模式下分配控制台
+    Console.WriteLine("Debug mode: Console allocated.");
+#endif
             Task.Run(() => ProcessCheck());
             Subscribe();
         }
@@ -44,7 +47,7 @@ namespace TbBaiZhouKeJi
         {
             RegisterHotKeyTool.UnregisterAllHotKeys(this);
             Unsubscribe();
-            CloseAllFunction();
+            CloseAllCheatService();
         }
 
         public void Subscribe()
@@ -68,7 +71,7 @@ namespace TbBaiZhouKeJi
             m_GlobalHook.Dispose();
         }
 
-        private void CloseAllFunction()
+        private void CloseAllCheatService()
         {
             // 获取 Service1 类型
             Type serviceType = typeof(Service1);
